@@ -1,17 +1,18 @@
 import pygame
 from pygame.locals import *
+from control import Control
 
 pygame.font.init()
-
 
 class GUI:
     def __init__(self):
         '''myfont = pygame.font.SysFont(None, 30)
         self.start_ = myfont.render('Start', False, (255, 255, 255))'''
-        self.width = 300
-        self.height = 100
-        self.centerPosX = 500 / 2 - self.width / 2
-        self.centerPosY = 500 / 2 - self.height / 2
+        self.control = Control()
+        self.width = pygame.display.Info().current_w * .2
+        self.height = pygame.display.Info().current_h * .1
+        self.centerPosX = self.control.width / 2 - self.width / 2
+        self.centerPosY = self.control.height / 2 - self.height / 2
         self.cursor = 0
 
         self.colorStart = (255, 255, 255)
