@@ -17,6 +17,13 @@ class Control:
                     GUI.cursor += 1
                 elif event.key == K_UP and GUI.cursor != 0:
                     GUI.cursor -= 1
+                elif event.key == K_RETURN:
+                    if GUI.cursor == 0:
+                        print('Start')
+                    elif GUI.cursor == 1:
+                        print('Settings')
+                    elif GUI.cursor == 2:
+                        self.flag_game = False
 
         pygame.display.update()
         self.clock.tick(60)
