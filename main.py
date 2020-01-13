@@ -9,6 +9,7 @@ pygame.init()
 GUI = GUI()
 control = Control()
 doctor = Doctor()
+#Саша лох
 
 # pygame.display.Info().current_w
 # pygame.display.Info().current_h
